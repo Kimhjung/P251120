@@ -16,10 +16,12 @@ void UC_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		bSprint = Character->bSprint;
 		Direction = UKismetAnimationLibrary::CalculateDirection(Character->GetCharacterMovement()->Velocity, Character->GetActorRotation());
 
+		/*
 		//직접 추가
 		bUnarmed = Character->bUnarmed;
 		bPistor = Character->bPistor;
 		bRifle = Character->bRifle;
+		*/
 	}
 }
 

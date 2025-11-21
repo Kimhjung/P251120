@@ -6,6 +6,17 @@
 #include "GameFramework/Character.h"
 #include "CChar.generated.h"
 
+//ABP에서 쓸거니까 블프에서 슬 ENUM이라고 알려줘야 함
+UENUM(BlueprintType)
+enum class EAnimState : uint8
+{
+	//숫자 안써주면 적힌 순서대로 자동 부여됨(위에서부터 0,1,2,3...)
+	//중간에 정보 끼워넣어야 할 수 있으니까 각 번호를 넓게 잡기
+	Unarmed = 0 UMETA(DisplayName = "Unarmed"),
+	Pistol = 10 UMETA(DisplayName = "Pistol"),
+	Rifle = 20 UMETA(DisplayName = "Rifle")
+};
+
 UCLASS()
 class P251120_API ACChar : public ACharacter
 {

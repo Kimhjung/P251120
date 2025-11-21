@@ -4,7 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
-//#include "Kismet/KismetAnimationLibrary.h"
+#include "CChar.h"
+
 #include "C_AnimInstance.generated.h"
 
 /**
@@ -30,7 +31,7 @@ public:
 	UFUNCTION()
 	void AnimNotify_SkeletonNotify();
 
-
+	/*
 	//직접 추가
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	uint8 bUnarmed : 1;
@@ -40,8 +41,10 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
 	uint8 bRifle : 1;
+	*/
 
-	
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
+	EAnimState EAnimState = EAnimState::Unarmed;
 
 
 };
